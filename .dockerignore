@@ -1,0 +1,7 @@
+
+# this is how you write a comment in this file
+# below this file is examples of how to ignore files
+# comment
+# */temp*
+# */*/temp*
+# temp?
