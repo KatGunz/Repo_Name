@@ -5,7 +5,7 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 ADD /target/name-0.0.1-SNAPSHOT.jar /..
-ENTRYPOINT["sh", "-c", "java -jar /name/target/name-0.0.1-SNAPSHOT.jar]
+ENTRYPOINT ["java -jar /target/name-0.0.1-SNAPSHOT.jar]
 
 
 #when your ec2 has deployed your image instances
