@@ -13,7 +13,7 @@
 # docker build -t repo/myApp:tag
 # end of comments for now
 
-docker build name
+docker build -f name
 ENTRYPOINT["sh", "c", "java -war name/target/name-0.0.1-SNAPSHOT.war]
 
 #when your ec2 has deployed your image instances
