@@ -4,7 +4,8 @@
 FROM maven:3.2-jdk-8-onbuild
 RUN mvn package
 VOLUME /tmp
-ADD target/name-0.0.1-SNAPSHOT.jar ./app.jar
+RUN ls
+ADD /usr/src/app/target/name-0.0.1-SNAPSHOT.jar ./app.jar
 ENTRYPOINT ["java", "-jar", "/target/name-0.0.1-SNAPSHOT.jar"]
 
 
