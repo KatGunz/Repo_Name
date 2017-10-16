@@ -1,5 +1,8 @@
 # escape=\
 
+#FROM openjdk:8-jdk-alpine
+#VOLUME tmp
+#ADD name/target/name-0.0.1-SNAPSHOT.war
 
 # this is a comment
 # docker build is located at the root of the context
@@ -10,9 +13,8 @@
 # docker build -t repo/myApp:tag
 # end of comments for now
 
-mvn package && java -jar target/gs-spring-boot-0.1.0.jar
-ARG CODE_VERSION=latest
-FROM openjdk:8-jdk-alpine
+docker build name
+ENTRYPOINT["sh", "c", "java -war name/target/name-0.0.1-SNAPSHOT.war]
 
 #when your ec2 has deployed your image instances
-#do a curl <ec2-manager-ip:port/path>
+#do a curl <ec2-manager-ip:port/uri>
