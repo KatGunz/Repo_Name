@@ -11,5 +11,4 @@
 # end of comments for now
 
 ARG CODE_VERSION=latest
-FROM name:${CODE_VERSION} AS test-image
-LABEL name="test label"
+FROM openjdk:8-jdk-alpine
