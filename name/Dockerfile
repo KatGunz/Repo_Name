@@ -3,7 +3,7 @@
 
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-ADD /name/target/name-0.0.1-SNAPSHOT.jar /tmp/app.jar
+ADD /name/target/name-0.0.1-SNAPSHOT.jar .
 ENTRYPOINT ["java", "-jar", "/target/name-0.0.1-SNAPSHOT.jar"]
 
 
