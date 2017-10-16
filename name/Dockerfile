@@ -1,9 +1,9 @@
 #mvn package
 
-FROM openjdk:8-jdk-alpine
+FROM openjdk:8-jdk-alpine-onbuild
 VOLUME /tmp
 ADD /target/name-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["sh:","-c", "java -jar app.jar"]
+ENTRYPOINT ["sh","-c", "java -jar app.jar"]
 
 
 #when your ec2 has deployed your image instances
