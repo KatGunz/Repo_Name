@@ -1,7 +1,7 @@
 #mvn package
 
-FROM maven:3.2-jdk-7-onbuild
-RUN mvn package -e -X
+FROM maven:3.2-jdk-8-onbuild
+RUN mvn package
 VOLUME /tmp
 ADD /target/name-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["sh","-c", "java -jar app.jar"]
