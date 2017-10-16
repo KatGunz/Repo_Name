@@ -11,5 +11,5 @@
 # end of comments for now
 
 ARG CODE_VERSION=latest
-FROM katgunz/repo_name:${CODE_VERSION} AS test-image
+FROM katgunz/repo_name/name:${CODE_VERSION} AS test-image
 LABEL name="test label"
